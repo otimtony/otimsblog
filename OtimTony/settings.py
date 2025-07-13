@@ -122,10 +122,14 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 # Conditional settings based on DEBUG
 if not DEBUG:
     # SECURITY SETTINGS
     STATIC_ROOT = '/home/otimtonyjeffer/otimsblog/static'
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
@@ -167,6 +171,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # blog_project/settings.py
 
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
