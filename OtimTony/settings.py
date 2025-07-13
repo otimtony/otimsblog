@@ -119,12 +119,13 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Conditional settings based on DEBUG
 if not DEBUG:
     # SECURITY SETTINGS
-    STATIC_URL = '/home/otimtonyjeffer/otimsblog/static'
+    STATIC_ROOT = '/home/otimtonyjeffer/otimsblog/static'
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
